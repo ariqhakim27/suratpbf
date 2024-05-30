@@ -1,4 +1,4 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://avatars.githubusercontent.com/u/87377917?s=200&v=4" width="200" alt="404NFID Logo"></a></p>
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://kontenjempolan.id/wp-content/uploads/2022/08/Logo_Padang.svg_-768x883.png" width="200" alt="404NFID Logo"></a></p>
 
 
 ## APLIKASI E-SURAT DISPOSISI
