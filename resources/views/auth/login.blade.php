@@ -67,6 +67,7 @@ data-template="vertical-menu-template-free"
                         <!-- Logo -->
                         <div class="app-brand justify-content-center">
                             <a href="{{ route('home') }}" class="app-brand-link gap-2">
+
                                 <img src="{{ asset('logo-disko-walkot.png') }}" alt="{{ config('app.name') }}" srcset="" width="300px">
                             </a>
 
@@ -90,7 +91,8 @@ data-template="vertical-menu-template-free"
                                 />
                             </div>
                             <div class="mt-2">
-                                <button class="btn btn-primary d-grid w-100" type="submit">{{ __('menu.auth.login') }}</button>
+                                <button class="btn btn-primary d-grid w-100" type="submit" method="POST" action="{{ route('verification.send') }}">{{ __('menu.auth.login') }}</button>
+                                
                             </div>
                         </form>
                     </div>

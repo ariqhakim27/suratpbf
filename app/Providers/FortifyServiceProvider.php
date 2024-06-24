@@ -33,7 +33,7 @@ class FortifyServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        Fortify::loginView(fn() => view('pages.login'));
+        Fortify::loginView(fn() => view('auth.login'));
 
         Fortify::createUsersUsing(CreateNewUser::class);
         Fortify::updateUserProfileInformationUsing(UpdateUserProfileInformation::class);
@@ -59,6 +59,14 @@ class FortifyServiceProvider extends ServiceProvider
 
         RateLimiter::for('two-factor', function (Request $request) {
             return Limit::perMinute(5)->by($request->session()->get('login.id'));
+        });
+
+        Fortify::requestPasswordResetLinkView(function () {
+            return view('pages.reset-password');
+        });
+
+        Fortify::verifyEmailView(function () {
+            return view('auth.verify-email');
         });
     }
 }
